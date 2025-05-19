@@ -4,15 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import PageObjectModule.MFTextPageObjectModule;
+import Utilities.CommonMethod;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class MFTextStepDefinition {
+public class MFTextStepDefinition  {
 	
 	WebDriver driver;
-	MFTextPageObjectModule Validation;
+	protected MFTextPageObjectModule Validation;
 	
 	@Given("Launch the Browser and Open SBIMF Login Page")
 	public void launch_the_browser_and_open_sbimf_login_page() {

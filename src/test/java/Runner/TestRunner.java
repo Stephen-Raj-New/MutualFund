@@ -5,9 +5,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/java/Features/MFTextValidation.feature", // path to your feature files
+    features = "src/test/java/Features", // path to your feature files
     glue = "StepDefinition", // package name of your step definitions
-    tags ="@Validation",
+    tags ="@Register_Page",
     plugin = {
         "pretty",
         "html:target/cucumber-reports.html",

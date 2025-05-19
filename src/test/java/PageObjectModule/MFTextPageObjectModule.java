@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MFTextPageObjectModule {
+import Utilities.CommonMethod;
+
+public class MFTextPageObjectModule extends CommonMethod {
 	
 	WebDriver driver;
 	
@@ -22,16 +24,19 @@ WebElement Verify_Last_Name_Locator;
 @FindBy(xpath= "//*[contains(text(), 'Please enter email address.')]") 
 WebElement Verify_email_address_Locator;
 
+
 public MFTextPageObjectModule(WebDriver driver) {
 	this.driver = driver;
 	PageFactory.initElements(driver, this);
 }
 
 public void Click_here_to_Register() {
-	New_Register_Locator.click();
+	//New_Register_Locator.click();
+    ClickOnButton(New_Register_Locator);
 }
 public void Click_on_First_Name()throws InterruptedException {
 	First_Name_Locator.click();
+	EnterValues(First_Name_Locator, "Stephen Raj");
 	First_Name_Locator.sendKeys(Keys.TAB);
 	Thread.sleep(3000);
 	First_Name_Locator.sendKeys(Keys.TAB);
